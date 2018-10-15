@@ -11,16 +11,18 @@ class Events extends React.Component{
   render(){
     let event1 = this.props.eventcards.map(card =>
       <div key={card.id} id='single-event'>
-        <h3>Event Name: {card.event_name}</h3>
-        <br></br>
         <img src={card.image_url} className='card' alt=''/>
-        <h5>Event Description: {card.event_description}</h5>
+        <h6>{card.event_name}</h6>
+        <br></br>
+        <br></br>
+        <br></br>
       </div>
     )
     return (
       <div className='container'>
         <h4 className='center'>Events</h4>
         {event1}
+        <h5>This Event is wack sauce</h5>
       </div>
     )
 

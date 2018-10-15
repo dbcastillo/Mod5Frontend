@@ -6,7 +6,7 @@ import About from './Components/About'
 import Login from './Components/Login'
 import Account from './Components/Account'
 import Events from './Components/Events'
-
+import './App.css';
 
 class App extends Component {
   render() {
@@ -14,8 +14,6 @@ class App extends Component {
       <BrowserRouter>
         <div className="App">
           <Navbar/>
-          <br></br>
-          <br></br>
           <Route path='/logo' component={Logo}/>
           <Route path='/about' component={About}/>
           <Route path='/login' component={Login}/>

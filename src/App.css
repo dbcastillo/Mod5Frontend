@@ -1,1 +1,30 @@
+.logo-container{
+  background: url('https://preview.ibb.co/k1xpmL/mod5pic.jpg');
+  background-size:  cover;
+  background-position: center;
+  background-repeat: repeat;
 
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  height: 100vh;
+  width: 100%;
+  background-color: hsla(10,100%,100%,0.30);
+  background-blend-mode: overlay;
+  background-repeat: no-repeat;
+}
+
+#joinMe{
+  color: black;
+  font-size: 10em;
+}
+
+#connectingPeople{
+  color: black;
+  font-size: 2em;
+}
+
+.nav-bar-fixed{
+  height: 1px;
+}
