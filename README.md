@@ -1,3 +1,16 @@
+add dependencies:
+npm install redux
+npm install react-redux
+npm install redux-thunk
+make store folder in src
+make store file in store directory
+make thunk file in store directory
+import create store in store file
+set initial state (init)
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
