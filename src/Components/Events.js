@@ -1,6 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {gettingEvents} from '../Store/thunk'
+import '../App.css';
 
 class Events extends React.Component{
 
@@ -19,27 +20,10 @@ class Events extends React.Component{
       </div>
     )
     return (
-      <div className='container'>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <h4 className='left'>Events Im Hosting</h4>
-        <br></br>
-        <br></br>
-        <br></br>
-        <div className='left'>
+      <div id='eventcontainer' className= "div-wrapper brown lighten-5">
+        <div id='eventContainer2'>
           {event1}
         </div>
-        <h4 className='right'>Events Im Attending</h4>
-          <br></br>
-          <br></br>
-          <br></br>
-          <div className='right'>
-            {event1}
-          </div>
       </div>
     )
 
@@ -59,3 +43,10 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 export default connect(mapStateToProps,mapDispatchToProps)(Events)
+
+//<br></br>
+// <br></br>
+// <br></br>
+// <br></br>
+// <br></br>
+// <br></br>

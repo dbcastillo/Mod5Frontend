@@ -28,3 +28,20 @@
 .nav-bar-fixed{
   height: 1px;
 }
+
+#eventcontainer{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 4em;
+  margin-left: 150px;
+  margin-right: 200px;
+}
+
+#eventcontainer2{
+  display: inline-block;
+}
+
+#single-event{
+  display: inline-block;
+  padding: 50px;
+}

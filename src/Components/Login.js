@@ -25,7 +25,7 @@ class Login extends React.Component {
 
   render(){
     return(
-      <div className='container'>
+      <div className='container brown lighten-5'>
         <form onSubmit={this.handleOnSubmit}>
           <h4>Login</h4>
 

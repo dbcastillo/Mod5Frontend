@@ -4,9 +4,9 @@ import {NavLink} from 'react-router-dom'
 const Navbar = () => {
   return(
     <div class="navbar-fixed">
-      <nav className="nav-wrapper brown">
+      <nav className="nav-wrapper brown lighten-2">
         <div className='container'>
-          <NavLink to="/logo"><img src="https://thumb.ibb.co/mrDN5f/Join-Me-Logo.png" alt="imageUrl"></img></NavLink>
+          <NavLink to="/homepage"><img src="https://thumb.ibb.co/mrDN5f/Join-Me-Logo.png" alt="imageUrl"></img></NavLink>
           <ul id='nav-mobile' class="left">
             <li class="active"><NavLink to= "/about">About</NavLink></li>
             <li class="active"><NavLink to= "/login">Login</NavLink></li>

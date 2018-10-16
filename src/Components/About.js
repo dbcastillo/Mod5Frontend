@@ -2,10 +2,24 @@ import React from 'react'
 
 const About = () => {
   return (
-    <div className='container'>
-      <h4 className='center'>About</h4>
+    <div className='container brown lighten-5'>
+      <h2 className='center'>About</h2>
       <h5>
-      Cras eu ullamcorper sem. Sed ultricies elit id porta maximus. Pellentesque sit amet suscipit tellus. Phasellus non ligula vel magna tempus condimentum et non ex. Donec dictum urna sit amet quam semper, in ullamcorper orci tincidunt. Vivamus nulla lacus, mollis nec dolor in, faucibus suscipit augue. Sed lorem lacus, mattis at metus non, tincidunt dictum justo. Quisque ac mauris pharetra, luctus dolor at, commodo purus. Donec sapien ipsum, facilisis sed dolor ornare, malesuada commodo nibh.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce aliquam luctus luctus. Ut placerat porta nibh. Nulla sed ante porttitor ante consequat fermentum. Vivamus suscipit molestie diam maximus rutrum. Cras gravida erat facilisis justo tincidunt, a faucibus mauris posuere. Curabitur risus orci, accumsan id tincidunt vel, imperdiet quis turpis. 
+      Whether you are looking for a date night idea, bored on Friday night, or wanna share your passion with others by hosting an event, Join_me has you covered.
+      <br></br>
+      <br></br>
+      All hosts go through a background check, and secure system to ensure that they are knowledgeable, hospitable, and safe people to guide unique experiences.
+      <br></br>
+      <br></br>
+      It takes the guesswork out of finding unique events. We do the work for you. We take care of everything.
+      <br></br>
+      <br></br>
+      Meet new people!
+      Share unforgettable experiences!
+      Kick back and let us take care of everthing!
+      <br></br>
+      <br></br>
+      <h3>Join-Me!</h3>
     </h5>
 
 
