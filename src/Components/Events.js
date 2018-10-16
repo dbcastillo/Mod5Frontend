@@ -20,9 +20,26 @@ class Events extends React.Component{
     )
     return (
       <div className='container'>
-        <h4 className='center'>Events</h4>
-        {event1}
-        <h5>This Event is wack sauce</h5>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <h4 className='left'>Events Im Hosting</h4>
+        <br></br>
+        <br></br>
+        <br></br>
+        <div className='left'>
+          {event1}
+        </div>
+        <h4 className='right'>Events Im Attending</h4>
+          <br></br>
+          <br></br>
+          <br></br>
+          <div className='right'>
+            {event1}
+          </div>
       </div>
     )
 

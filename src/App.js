@@ -6,6 +6,7 @@ import About from './Components/About'
 import Login from './Components/Login'
 import Account from './Components/Account'
 import Events from './Components/Events'
+import SignupPage from './Components/SignupPage'
 import './App.css';
 
 class App extends Component {
@@ -19,6 +20,7 @@ class App extends Component {
           <Route path='/login' component={Login}/>
           <Route path='/account' component={Account}/>
           <Route path='/events' component={Events}/>
+          <Route path='/SignupPage' component={SignupPage}/>
         </div>
       </BrowserRouter>
     );
