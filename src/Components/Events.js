@@ -2,22 +2,27 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {gettingEvents} from '../Store/thunk'
 import '../App.css';
+import {NavLink} from 'react-router-dom'
 
 class Events extends React.Component{
-
 
   componentDidMount() {
     this.props.getAllEvents()
   }
+
   render(){
+    console.log('in events',this.props);
     let event1 = this.props.eventcards.map(card =>
+      <NavLink to={"/" + card.event_name.split(" ").join("_")}>
       <div key={card.id} id='single-event'>
         <img src={card.image_url} className='card' alt=''/>
         <h6>{card.event_name}</h6>
+        <h6>{card.guests.length} guests attending</h6>
         <br></br>
         <br></br>
         <br></br>
       </div>
+      </NavLink>
     )
     return (
       <div id='eventcontainer' className= "div-wrapper brown lighten-5">
@@ -32,7 +37,9 @@ class Events extends React.Component{
 
 const mapStateToProps = (state) => {
   return {
-    eventcards: state.eventcards
+    eventcards: state.eventcards,
+    userIsLoggedIn: state.userIsLoggedIn,
+    userInfo: state.userInfo
   }
 }
 
@@ -43,10 +50,3 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 export default connect(mapStateToProps,mapDispatchToProps)(Events)
-
-//<br></br>
-// <br></br>
-// <br></br>
-// <br></br>
-// <br></br>
-// <br></br>

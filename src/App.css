@@ -1,28 +1,30 @@
 .logo-container{
-  background: url('https://preview.ibb.co/k1xpmL/mod5pic.jpg');
+  background: url('https://preview.ibb.co/dCPpWL/Group-Pic2.png');
   background-size:  cover;
-  background-position: center;
-  background-repeat: repeat;
+  background-position: fixed;
+  background-repeat: no-repeat;
 
   display: block;
   margin-left: auto;
   margin-right: auto;
 
-  height: 100vh;
+  height: 92vh;
   width: 100%;
   background-color: hsla(10,100%,100%,0.30);
   background-blend-mode: overlay;
-  background-repeat: no-repeat;
 }
 
 #joinMe{
-  color: black;
-  font-size: 10em;
+  color: white;
+  font-family: Ubuntu;
+  font-size: 9em;
 }
 
 #connectingPeople{
-  color: black;
+  color: white;
   font-size: 2em;
+  font-family: Ubuntu;
+  font-style: italic;
 }
 
 .nav-bar-fixed{
@@ -44,4 +46,57 @@
 #single-event{
   display: inline-block;
   padding: 50px;
+}
+
+.card-large {
+  width: 600px;
+}
+
+.navbar-fixed {
+  position: relative;
+}
+
+#navbarnav {
+  min-height: 50px;
+  border: solid;
+  border-color: black;
+  border-width: medium;
+}
+
+
+#nav-mobile {
+  display: inline-block;
+  margin-left: 490px;
+  font-family: Ubuntu;
+}
+
+#nav-mobile2 {
+  display: inline-block;
+  margin-left: 60px;
+  font-family: Ubuntu;
+}
+
+#navImage {
+  display: inline-block;
+  margin-left: 50px;
+  min-height: 30px;
+  min-width: 80px;
+}
+
+#button {
+  font-family: Ubuntu;
+}
+
+#see-events{
+  margin-left: 570px;
+  border: solid;
+}
+
+#host-event{
+  margin-right: 550px;
+  border: solid;
+}
+
+#h5{
+  color: black;
 }

@@ -1,16 +1,68 @@
 import React from 'react'
+import {NavLink, Redirect} from 'react-router-dom'
+import {connect} from 'react-redux'
+import {loggingIn} from '../Store/thunk'
+import UserAdapter from '../Adapters/UserAdapter'
 
-const Account = () => {
-  return (
-    <div className='container brown lighten-5'>
-      <h4 className='center'>Account</h4>
-      <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce aliquam luctus luctus. Ut placerat porta nibh. Nulla sed ante porttitor ante consequat fermentum. Vivamus suscipit molestie diam maximus rutrum. Cras gravida erat facilisis justo tincidunt, a faucibus mauris posuere. Curabitur risus orci, accumsan id tincidunt vel, imperdiet quis turpis. Cras eu ullamcorper sem. Sed ultricies elit id porta maximus. Pellentesque sit amet suscipit tellus. Phasellus non ligula vel magna tempus condimentum et non ex. Donec dictum urna sit amet quam semper, in ullamcorper orci tincidunt. Vivamus nulla lacus, mollis nec dolor in, faucibus suscipit augue. Sed lorem lacus, mattis at metus non, tincidunt dictum justo. Quisque ac mauris pharetra, luctus dolor at, commodo purus. Donec sapien ipsum, facilisis sed dolor ornare, malesuada commodo nibh.
-      </p>
+class Account extends React.Component{
 
 
-    </div>
-  )
+  render(){
+    let host_events = this.props.userInfo.host_events.map(event =>
+      <NavLink to={"/" + event.event_name.split(" ").join("_")}>
+        <div key={event.id} id='single-event'>
+          <img src={event.image_url} className='event' alt=''/>
+          <h6>{event.event_name}</h6>
+          <br></br>
+          <br></br>
+          <br></br>
+        </div>
+      </NavLink>
+    )
+
+    let events = this.props.userInfo.events.map(event =>
+      <NavLink to={"/" + event.event_name.split(" ").join("_")}>
+        <div key={event.id} id='single-event'>
+          <img src={event.image_url} className='event' alt=''/>
+          <h6>{event.event_name}</h6>
+          <br></br>
+          <br></br>
+          <br></br>
+        </div>
+      </NavLink>
+    )
+    console.log('in account',this.props.userInfo);
+    if (this.props.userIsLoggedIn) {
+      return (
+        <div className='container brown lighten-5'>
+          {this.props.userInfo ?
+            <div>
+            <h2 className='center'>Welcome, {this.props.userInfo.user.username}!</h2>
+            <h4>Events I am hosting:</h4>
+              {host_events}
+            <h4>Events I am attending:</h4>
+              {events} </div> : <p>loading</p>
+          }
+        </div>)
+    } else {
+       return <Redirect to='login'/>
+    }
+  }
 }
 
-export default Account
+const mapStateToProps = (state) => {
+  return {
+    eventcards: state.eventcards,
+    userIsLoggedIn: state.userIsLoggedIn,
+    userInfo: state.userInfo
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    userLoggingIn: (userInfo) =>  dispatch(loggingIn(userInfo))
+    // getAllEvents: () => dispatch(gettingEvents())
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Account)

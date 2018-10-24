@@ -1,16 +1,38 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {loggingIn} from '../Store/thunk'
+import { Link, NavLink, Redirect } from 'react-router-dom'
+import UserAdapter from '../Adapters/UserAdapter'
 
 class Login extends React.Component {
 
   constructor(props) {
     super(props);
     this.state = {
+      // currentUser: {},
+      // host_events: [],
+      // user_events: [],
       username: "",
       password: ""
-    };
+    }
   }
+
+  // logout = () => {
+  //   this.setState({
+  //     currentUser: {},
+  //     host_events: [],
+  //     user_events: []
+  //   })
+  // }
+  //
+  // setUser = (userObj) => {
+  //   console.log(userObj);
+  //   // this.setState({
+  //   //   currentUser: userObj.user,
+  //   //   host_events: userObj.host_events,
+  //   //   user_events: userObj.user_events
+  //   // })
+  // }
 
   handleOnChange = (event) => {
     this.setState({
@@ -20,52 +42,62 @@ class Login extends React.Component {
 
   handleOnSubmit = (event) => {
     event.preventDefault()
-    this.props.userLoggingIn(this.state)
+    UserAdapter.login(this.state)
+    .then(data => {
+      this.props.userLoggingIn(data)
+    })
   }
 
   render(){
-    return(
-      <div className='container brown lighten-5'>
+    console.log("APP", this.props)
+    if (this.props.userIsLoggedIn) {
+      return <Redirect to='/account'/>
+    } else {
+        return (<div className='container center brown lighten-5'>
         <form onSubmit={this.handleOnSubmit}>
-          <h4>Login</h4>
-
+          <h1>Login</h1>
+          <br></br>
+          <br></br>
+          <br></br>
           <div className="usernameDiv">
-            <label className="usernameLabel">Username</label>
-            <input
+            <label><h4>Username</h4></label>
+            <h5><input
               type="text"
               name="username"
-              className="inputArea"
+              className="center"
               onChange={this.handleOnChange}
               value={this.state.username}
-            />
-          <label className="usernamePassword">Password</label>
-            <input
+            /></h5>
+          <label><h4>Password</h4></label>
+            <h5><input
               type="password"
               name="password"
-              className="inputArea"
+              className="center"
               onChange={this.handleOnChange}
               value={this.state.password}
-            />
+            /></h5>
           </div>
-
+          <br></br>
           <div className="loginDiv">
-            {this.props.userIsLoggedIn ? <p>Successfully Logged In!</p> : <p>{null}</p>}
             <button
-              className="loginButton">
+              type="submit"
+              className="loginButton"><h5>
               Log In
-            </button>
+            </h5></button>
+          <br></br>
+          <br></br>
+          <br></br>
+            <h3><Link to="/SignupPage">New User...Sign Up</Link></h3>
           </div>
         </form>
         <br></br>
         <br></br>
         <br></br>
-        <button className="loginButton">
-          Sign Up
-        </button>
-      </div>
-    )
+      </div>)
+    }
   }
 }
+
 
 const mapStateToProps = (state) => {
   return {

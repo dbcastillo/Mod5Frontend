@@ -1,4 +1,4 @@
-import {GET_EVENTS, LOGIN, LOADING, DONE_LOADING} from './actionType'
+import {GET_EVENTS, LOGIN, LOGOUT, LOADING, DONE_LOADING, SELECTED_EVENT, SIGN_UP, ERROR} from './actionType'
 
 const gotEvents = (payload) => {
   return {
@@ -8,9 +8,29 @@ const gotEvents = (payload) => {
 }
 
 const loggedIn = (payload) => {
-  console.log('im in logged in', payload);
   return {
     type: LOGIN,
+    payload: payload
+  }
+}
+
+export const loggedOut = (payload) => {
+  return {
+    type: LOGOUT,
+    payload: payload
+  }
+}
+
+const signedUp = (payload) => {
+  return {
+    type: SIGN_UP,
+    payload: payload
+  }
+}
+
+export const selectedEvent = (payload) => {
+  return {
+    type: SELECTED_EVENT,
     payload: payload
   }
 }
@@ -27,6 +47,13 @@ const done_loading = () => {
   }
 }
 
+const error = (payload) => {
+  return {
+    type: ERROR,
+    payload: payload
+  }
+}
+
 export const gettingEvents = () => {
   return (dispatch) => {
     fetch('http://localhost:3000/events')
@@ -39,8 +66,13 @@ export const gettingEvents = () => {
 
 export const loggingIn = (userInfo) => {
   return (dispatch) => {
-    console.log('this is in thunk', userInfo);
-    dispatch(loading())
+    dispatch(loggedIn(userInfo))
+  }
+}
+
+export const signingUp = (userInfo) => {
+  return (dispatch) => {
+    console.log('this is in thunk/logginIn', userInfo);
     fetch('http://localhost:3000/users', {
       method: "POST",
       headers: {'Content-Type': 'application/json'},
@@ -50,10 +82,13 @@ export const loggingIn = (userInfo) => {
       })
     })
     .then(res=> res.json())
-    .then(loginInfo =>
-      dispatch(loggedIn(loginInfo))
-      )
+    .then(loginInfo => {
+      if (loginInfo.username[0] !== "has already been taken") {
+        return dispatch(signedUp(loginInfo))
+      } else {
+        return dispatch(error(loginInfo.username[0]))
+      }
+    })
     // }
-    dispatch(done_loading())
   }
 }
