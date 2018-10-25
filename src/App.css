@@ -56,6 +56,10 @@
   position: relative;
 }
 
+.eventName {
+  color: brown;
+}
+
 #navbarnav {
   min-height: 50px;
   border: solid;

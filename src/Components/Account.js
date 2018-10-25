@@ -11,8 +11,8 @@ class Account extends React.Component{
     let host_events = this.props.userInfo.host_events.map(event =>
       <NavLink to={"/" + event.event_name.split(" ").join("_")}>
         <div key={event.id} id='single-event'>
-          <img src={event.image_url} className='event' alt=''/>
-          <h6>{event.event_name}</h6>
+          <img src={event.image_url} className='event' alt='' height="275" width="275"/>
+          <h6 className='eventName'>{event.event_name}</h6>
           <br></br>
           <br></br>
           <br></br>
@@ -23,8 +23,8 @@ class Account extends React.Component{
     let events = this.props.userInfo.events.map(event =>
       <NavLink to={"/" + event.event_name.split(" ").join("_")}>
         <div key={event.id} id='single-event'>
-          <img src={event.image_url} className='event' alt=''/>
-          <h6>{event.event_name}</h6>
+          <img src={event.image_url} className='event' alt='' height="275" width="275"/>
+          <h6 className='eventName'>{event.event_name}</h6>
           <br></br>
           <br></br>
           <br></br>
