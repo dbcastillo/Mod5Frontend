@@ -10,7 +10,7 @@
 
   height: 92vh;
   width: 100%;
-  background-color: hsla(10,100%,100%,0.30);
+  background-color: hsla(10,100%,100%,0);
   background-blend-mode: overlay;
 }
 
