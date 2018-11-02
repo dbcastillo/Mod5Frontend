@@ -12,10 +12,10 @@ Join Me, an event app allowing users to browse and host/attend community created
 
 ## Built With
 
-React
-Ruby
-Rails API utilizing Active Model Serializers
-PostgreSQL Database using ActiveRecord
+* React
+* Ruby
+* Rails API utilizing Active Model Serializers
+* PostgreSQL Database using ActiveRecord
 
 ## Back-End Repository
 
