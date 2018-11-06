@@ -37,7 +37,7 @@ https://github.com/dbcastillo/Mod5Backend
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](https://gist.github.com/dbcastillo/75308bee09c36e8e8aedd58a6de0e37f) for details on our code of conduct, and the process for submitting pull requests to us.
+[CONTRIBUTING.md](https://gist.github.com/dbcastillo/75308bee09c36e8e8aedd58a6de0e37f)
 
 ## Author
 

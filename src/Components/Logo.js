@@ -9,18 +9,6 @@ class Logo extends React.Component{
     return (
 
       <div className='logo-container'>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
         <h4 className='center' id='joinMe'>Join-Me</h4>
         <h6 className='center' id='connectingPeople'>Connecting people through unique experiences</h6>
         <br></br>

@@ -17,7 +17,7 @@ class Events extends React.Component{
       <div key={card.id} id='single-event'>
         <img src={card.image_url} className='card' alt='' height="275" width="275"/>
         <h6 className='eventName'>{card.event_name}</h6>
-        <h6 className='eventName'>{card.guests.length} guests attending</h6>
+        <h6 className='eventName'>{card.guests.length} guest(s) attending</h6>
         <br></br>
         <br></br>
         <br></br>
