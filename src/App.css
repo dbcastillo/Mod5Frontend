@@ -1,6 +1,6 @@
 .logo-container{
   background: url('https://preview.ibb.co/dCPpWL/Group-Pic2.png');
-  background-size:  cover;
+  background-size: cover;
   background-position: fixed;
   background-repeat: no-repeat;
 
@@ -8,7 +8,7 @@
   margin-left: auto;
   margin-right: auto;
 
-  height: 92vh;
+  height: 90vh;
   width: 100%;
   background-color: hsla(10,100%,100%,0);
   background-blend-mode: overlay;
@@ -17,8 +17,8 @@
 #joinMe{
   color: white;
   font-family: Ubuntu;
-  font-size: 9em;
-  padding-top: 2em;
+  font-size: 8em;
+  padding-top: 1.2em;
 }
 
 #connectingPeople{
@@ -32,17 +32,26 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 4em;
-  margin-left: 150px;
-  margin-right: 200px;
+  margin-left: 1px;
+  margin-right: 300px;
+  width: 1150px;
 }
 
 #eventcontainer2{
-  display: inline-block;
+  margin-right: 500px;
 }
 
 #single-event{
   display: inline-block;
   padding: 50px;
+}
+
+#hosting{
+  padding-left: 50px;
+}
+
+#attending{
+  padding-left: 50px;
 }
 
 .card-large {
@@ -58,7 +67,7 @@
 }
 
 #navbarnav {
-  min-height: 50px;
+  min-height: 87px;
   border: solid;
   border-color: black;
   border-width: medium;
@@ -67,7 +76,7 @@
 
 #nav-mobile {
   display: inline-block;
-  margin-left: 490px;
+  margin-left: 240px;
   font-family: Ubuntu;
 }
 
@@ -89,12 +98,12 @@
 }
 
 #see-events{
-  margin-left: 570px;
+  margin-left: 400px;
   border: solid;
 }
 
 #host-event{
-  margin-right: 550px;
+  margin-right: 400px;
   border: solid;
 }
 

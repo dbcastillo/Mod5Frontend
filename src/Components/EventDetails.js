@@ -11,6 +11,27 @@ class EventDetails extends React.Component{
     this.props.selectedEvent()
   }
 
+  // let button = () => {
+  //   if (this.props.userIsLoggedIn) {
+  //     if (!this.props.userInfo.host_events.map(event => event.id).includes(this.props.event.id) || !this.props.userInfo.events.map(event => event.id).includes(this.props.event.id) ){
+  //       return <NavLink to= "/guest_form">
+  //       <button className="btn-floating btn-large pulse brown">
+  //         Attend Event
+  //       </button>
+  //     </NavLink>
+  //     } else if (this.props.userInfo.host_events.map(event => event.id).includes(this.props.event.id) || this.props.userInfo.events.map(event => event.id).includes(this.props.event.id) ){
+  //       return <h6>Enjoy!</h6>
+  //     }
+  //   } else {
+  //     return
+  //     <NavLink to= "/login">
+  //       <button className="btn-floating btn-large pulse brown">
+  //         Attend Event
+  //       </button>
+  //     </NavLink>
+  //   }
+  // }
+
   render(){
     console.log('in event details', this.props)
 
@@ -34,18 +55,7 @@ class EventDetails extends React.Component{
             <h3>{this.props.event.host_name} will be your host!</h3>
             <h5>About {this.props.event.host_name}: {this.props.event.host_description}</h5>
             <br></br>
-            {
-              this.props.userIsLoggedIn ?
-            <NavLink to= "/guest_form">
-            <button className="btn-floating btn-large pulse brown">
-              Attend Event
-            </button>
-            </NavLink> : <NavLink to= "/login">
-            <button className="btn-floating btn-large pulse brown">
-              Attend Event
-            </button>
-            </NavLink>
-            }
+            {null}
           </div> : <p>loading</p>}
       </article>
     )
@@ -55,7 +65,8 @@ class EventDetails extends React.Component{
 const mapStateToProps = (state) => {
   return {
     selectedEvent: state.selectedEvent,
-    userIsLoggedIn: state.userIsLoggedIn
+    userIsLoggedIn: state.userIsLoggedIn,
+    userInfo: state.userInfo
   }
 }
 
