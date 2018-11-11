@@ -28,17 +28,13 @@
   font-style: italic;
 }
 
-#eventcontainer{
+#eventContainer{
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 4em;
   margin-left: 1px;
   margin-right: 300px;
   width: 1150px;
-}
-
-#eventcontainer2{
-  margin-right: 500px;
 }
 
 #single-event{

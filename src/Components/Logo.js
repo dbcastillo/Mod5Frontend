@@ -10,7 +10,11 @@ class Logo extends React.Component{
 
       <div className='logo-container'>
         <h4 className='center' id='joinMe'>Join-Me</h4>
-        <h6 className='center' id='connectingPeople'>Connecting people through unique experiences</h6>
+        <h6
+          className='center'
+          id='connectingPeople'>
+          Connecting people through unique experiences
+        </h6>
         <br></br>
         <br></br>
         <div id='see-events' className='left'>

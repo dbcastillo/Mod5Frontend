@@ -3,7 +3,6 @@ import SignupForm from './SignupForm'
 
 class SignupPage extends React.Component {
 
-
   render(){
     console.log(this.props.history);
     return(
@@ -14,6 +13,7 @@ class SignupPage extends React.Component {
       </div>
     )
   }
+
 }
 
 export default SignupPage

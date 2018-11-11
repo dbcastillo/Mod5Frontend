@@ -12,7 +12,7 @@ import GuestForm from './Components/GuestForm'
 import EventDetails from './Components/EventDetails'
 import './App.css';
 import {connect} from 'react-redux'
-
+import {gettingEvents} from './Store/thunk'
 
 class App extends Component {
 
@@ -21,15 +21,16 @@ class App extends Component {
     this.renderEvent = this.renderEvent.bind(this)
   }
 
-  renderEvent(renderProps){
-    console.log('in app js', renderProps);
-    const singleEvent = this.props.eventcards.find((event) =>
-     event.event_name.split(" ").join("_") === renderProps.match.params.slug)
-    // // console.log(renderProps.match.params.slug);
-    return <EventDetails event={singleEvent}/>
+  componentDidMount() {
+    this.props.getAllEvents()
   }
 
-
+  renderEvent(renderProps){
+    const singleEvent = this.props.eventcards.find((event) =>
+     event.event_name.split(" ").join("_") ===
+     renderProps.match.params.slug)
+    return <EventDetails event={singleEvent}/>
+  }
 
   render() {
     return (
@@ -38,6 +39,7 @@ class App extends Component {
           <Navbar/>
           <Switch>
           <Route exact path='/homepage' component={Logo}/>
+          <Route exact path='/' component={Logo}/>
           <Route exact path='/about' component={About}/>
           <Route exact path='/login' component={Login}/>
           <Route exact path='/account' component={Account}/>
@@ -59,4 +61,10 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps)(App)
+const mapDispatchToProps = (dispatch) => {
+  return {
+    getAllEvents: () => dispatch(gettingEvents())
+  }
+}
+
+export default connect(mapStateToProps,mapDispatchToProps)(App)

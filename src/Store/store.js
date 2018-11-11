@@ -1,8 +1,6 @@
 import {createStore, applyMiddleware} from 'redux'
-import {GET_EVENTS, LOGIN, LOGOUT, LOADING, DONE_LOADING, SELECTED_EVENT, SIGN_UP, ERROR} from './actionType'
 import logger from 'redux-logger'
 import thunk from 'redux-thunk'
-
 
 let initialState = {
   eventcards: [],
@@ -16,22 +14,22 @@ let initialState = {
 
 const reducer = (state = initialState, action) => {
   switch(action.type) {
-    case GET_EVENTS:
+    case 'GET_EVENTS':
       return {...state, eventcards: action.payload}
-    case LOGIN:
+    case 'LOGIN':
       return {...state, userIsLoggedIn: true, userInfo: action.payload}
-    case LOGOUT:
+    case 'LOGOUT':
       return {...state, userIsLoggedIn: false, currentUser: {}, host_events: [], user_events: []
       }
-    case LOADING:
+    case 'LOADING':
       return {...state, loading: true}
-    case DONE_LOADING:
+    case 'DONE_LOADING':
       return {...state, loading: false}
-    case SELECTED_EVENT:
+    case 'SELECTED_EVENT':
       return {...state, selectedEvent: action.payload}
-    case SIGN_UP:
+    case 'SIGN_UP':
       return {...state, error: false, errorMessage: "", userInfo: action.payload, userIsLoggedIn: true}
-    case ERROR:
+    case 'ERROR':
       return {...state, error: true, errorMessage: action.payload}
     default:
       return state

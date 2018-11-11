@@ -1,8 +1,0 @@
-export const GET_EVENTS = 'GET_EVENTS'
-export const LOGIN = 'LOGIN'
-export const LOADING = 'LOADING'
-export const DONE_LOADING = 'DONE_LOADING'
-export const SELECTED_EVENT = 'SELECTED_EVENT'
-export const SIGN_UP = 'SIGN_UP'
-export const ERROR = 'ERROR'
-export const LOGOUT = 'LOGOUT'

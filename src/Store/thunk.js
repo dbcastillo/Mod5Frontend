@@ -1,55 +1,53 @@
-import {GET_EVENTS, LOGIN, LOGOUT, LOADING, DONE_LOADING, SELECTED_EVENT, SIGN_UP, ERROR} from './actionType'
-
 const gotEvents = (payload) => {
   return {
-    type: GET_EVENTS,
+    type: 'GET_EVENTS',
     payload: payload
   }
 }
 
 const loggedIn = (payload) => {
   return {
-    type: LOGIN,
+    type: 'LOGIN',
     payload: payload
   }
 }
 
 export const loggedOut = (payload) => {
   return {
-    type: LOGOUT,
+    type: 'LOGOUT',
     payload: payload
   }
 }
 
 const signedUp = (payload) => {
   return {
-    type: SIGN_UP,
+    type: 'SIGN_UP',
     payload: payload
   }
 }
 
 export const selectedEvent = (payload) => {
   return {
-    type: SELECTED_EVENT,
+    type: 'SELECTED_EVENT',
     payload: payload
   }
 }
 
 const loading = () => {
   return {
-    type: LOADING,
+    type: 'LOADING'
   }
 }
 
 const done_loading = () => {
   return {
-    type: DONE_LOADING,
+    type: 'DONE_LOADING'
   }
 }
 
 const error = (payload) => {
   return {
-    type: ERROR,
+    type: 'ERROR',
     payload: payload
   }
 }
@@ -89,6 +87,5 @@ export const signingUp = (userInfo) => {
         return dispatch(error(loginInfo.username[0]))
       }
     })
-    // }
   }
 }

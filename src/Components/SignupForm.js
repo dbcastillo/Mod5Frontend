@@ -80,7 +80,6 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     userSigningUp: (userInfo) =>  dispatch(signingUp(userInfo))
-    // getAllEvents: () => dispatch(gettingEvents())
   }
 }
 

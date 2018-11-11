@@ -32,7 +32,7 @@ https://github.com/dbcastillo/Mod5Backend
 ## Client-Side Install Instructions
 
 1. Run ```npm install```
-2. Run ```npm start```
+2. Run ```PORT=3001 npm start```
 
 
 ## Contributing
