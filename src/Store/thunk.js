@@ -54,7 +54,7 @@ const error = (payload) => {
 
 export const gettingEvents = () => {
   return (dispatch) => {
-    fetch('http://localhost:3000/events')
+    fetch('http://localhost:3001/events')
     .then(res=> res.json())
     .then(AllEvents =>
       dispatch(gotEvents(AllEvents))
@@ -71,7 +71,7 @@ export const loggingIn = (userInfo) => {
 export const signingUp = (userInfo) => {
   return (dispatch) => {
     console.log('this is in thunk/logginIn', userInfo);
-    fetch('http://localhost:3000/users', {
+    fetch('http://localhost:3001/users', {
       method: "POST",
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({

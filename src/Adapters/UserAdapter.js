@@ -1,6 +1,6 @@
 class UserAdapter{
   static login(data){
-    return fetch('http://localhost:3000/login', {
+    return fetch('http://localhost:3001/login', {
       method: "POST",
       headers: {
         "Content-type": "application/json",

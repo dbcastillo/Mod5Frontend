@@ -48,8 +48,8 @@ class EventDetails extends React.Component{
             <hr></hr>
             <hr></hr>
             <h3>{this.props.event.host_name} will be your host!</h3>
-            <h5>About {this.props.event.host_name}:
-              {this.props.event.host_description}</h5>
+            <h5>About {this.props.event.host_name}: {this.props.event.host_description}
+            </h5>
             <br></br>
             {attend_button()}
           </div> : <p>loading</p>}

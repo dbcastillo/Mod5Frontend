@@ -1,3 +1,6 @@
+# Link to Demo Video
+* https://youtu.be/5qvZ9ssDsOg 
+
 # Join Me
 
 Join Me, an event app allowing users to browse and host/attend community created events.
@@ -27,12 +30,12 @@ https://github.com/dbcastillo/Mod5Backend
 2. Run ```rake db:create```
 3. Run ```rake db:migrate```
 4. Run ```rake db:seed```
-5. Run ```rails s -p 3000```
+5. Run ```rails s -p 3001```
 
 ## Client-Side Install Instructions
 
 1. Run ```npm install```
-2. Run ```PORT=3001 npm start```
+2. Run ```npm start```
 
 
 ## Contributing
